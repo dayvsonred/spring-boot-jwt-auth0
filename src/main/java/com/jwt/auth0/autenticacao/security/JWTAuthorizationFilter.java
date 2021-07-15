@@ -33,7 +33,7 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 		System.out.println("mandou token ********************");
 		
 		String header = request.getHeader("Authorization");
-		response.setHeader("VALID_DAY", "OK");
+		//response.setHeader("VALID_DAY", "OK");
 		if (header != null && header.startsWith("Bearer ")) {
 			UsernamePasswordAuthenticationToken auth = getAuthentication(header.substring(7));
 			if (auth != null) {
